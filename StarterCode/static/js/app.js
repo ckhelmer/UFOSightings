@@ -18,19 +18,24 @@ tableData.forEach(function(whatever){
 //declare event variables
 
 const button = d3.select('button');
-let inputElement = d3.select('.filter').text();
-// let inputValue = inputElement.property("value");
-const cellglobal = d3.select('td');
+const inputElement = d3.select('.form-control');
+
+const cellglobal = d3.selectAll('td');
 
 function handleDate(event) {
     //prevent refreshing
     d3.event.preventDefault();
-    console.log(inputElement);
-    
-    // if (input in cellglobal) {
-    //     console.log(input);
-    //     console.log(cellglobal);
-    // }
-}
+    d3.selectAll('tbody tr').remove();
+    let inputValue = inputElement.property("value");
+    console.log(inputValue);
+    var filteredDate = tableData.filter(date => date.datetime == inputValue);
+    console.log(filteredDate);
+    filteredDate.forEach(function(a) {
+        const tablerow = tablebody.append('tr');
+        Object.entries(a).forEach(function([key, value]) {
+            const cell = tablerow.append('td').text(value);
+        })
+    })
+}    
 
 button.on('click', handleDate);
