@@ -6,7 +6,7 @@ tableData.forEach(function(whatever){
   const dropdownButton = dropdown.append('button');
   dropdownButton.attr('class', 'dropdown-item').attr('type', 'button')
   //populate the rows with data (with a nested forEach)
-  // Object.entries(whatever).forEach(function([key, value]){
-  //     const cell = tablerow.append('td').text(value);
+  Object.entries(whatever).forEach(function([key, value]){
+       const cell = tablerow.append('td').text(value);
   })
 })
