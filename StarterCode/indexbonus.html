@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>UFO Finder</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.bundle.min.js">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="static/css/style.css">
 </head>
@@ -28,62 +28,10 @@
     <div class="container">
       <div class = 'row'>
         <div class = 'col-md-12'>
-          <h5>Filter by:</h5>
-          </br>
-          <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Date
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-               <!-- <button class="dropdown-item" type="button">Datetime</button>-->
-
-              </div>
+          
+          
             </div>
-          <div class="dropdown">
-              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                City
-              </button>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-              </div>
-            </div>
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  State
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                  <button class="dropdown-item" type="button">Action</button>
-                  <button class="dropdown-item" type="button">Another action</button>
-                  <button class="dropdown-item" type="button">Something else here</button>
-                </div>
-              </div>
-              <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Country
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-
-                  </div>
-                </div>
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Shape
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-
-                    </div>
-                  </div>
-                  <div class="dropdown">
-                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Duration
-                      </button>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-
-                      </div>
-                    </div>
-                </div>
-              </div>
         </div>
-      </div>
       <div class="row margin-top-50">
         <div class="col-md-12">
           <div id="table-area" class="">
@@ -91,18 +39,60 @@
               <thead>
                 <tr>
                   <th class="table-head">
-                        <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  Date
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                </div>
-                              </div></th>
-                  <th class="table-head">City</th>
-                  <th class="table-head">State</th>
-                  <th class="table-head">Country</th>
-                  <th class="table-head">Shape</th>
-                  <th class="table-head">Duration</th>
+                    <div class="dropdown" id = 'datedropdown'>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Date
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                     <!-- <button class="dropdown-item" type="button">Datetime</button>-->
+      
+                    </div>
+                  </div></th>
+                  <th class="table-head">
+                    <div class="dropdown" id = 'citydropdown'>
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                City
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+              </div>
+            </div></th>
+                  <th class="table-head"> <div class="dropdown" id = 'statedropdown'>
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  State
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <button class="dropdown-item" type="button">Action</button>
+                  <button class="dropdown-item" type="button">Another action</button>
+                  <button class="dropdown-item" type="button">Something else here</button>
+                </div></div></th>
+                  <th class="table-head">
+                    <div class="dropdown" id= 'countrydropdown'>
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Country
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    
+                      </div>
+                    </div></th>
+                  <th class="table-head">
+                    <div class="dropdown" id = 'shapedropdoown'>
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shape
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+  
+                      </div>
+                    </div></th>
+                  <th class="table-head">
+                    <div class="dropdown" id = 'durationdropdown'>
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Duration
+                      </button>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+
+                      </div>
+                    </div>
+                </div></th>
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
